@@ -21,20 +21,20 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav col-xxl-6 col-xl-7 col-lg-9 offset-xxl-4 offset-xl-2">
       <li class="nav-item">
-        <a class="nav-link lang" href="#">Currency</a>
+        <a class="nav-link" id="currency" href="#">Currency</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link lang" href="#">Calculator</a>
+        <a class="nav-link" id="calc" href="#">Calculator</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link lang" href="#">Information</a>
+        <a class="nav-link" id="info" href="#">Information</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link lang" href="#">Map</a>
+        <a class="nav-link" id="map" href="#">Map</a>
       </li>
     </ul>
     <div class="form-inline my-2 my-lg-0">
-      <select class="form-controll mr-sm-2 translate" id="language-select">
+      <select class="form-controll mr-sm-2" id="language-select">
         <option value="en">EN</option>
         <option value="ru">RU</option>
         <option value="ge">GE</option>
@@ -48,52 +48,52 @@
        <div class="info-block">
         <div class="currency-display">
   <div class="currency-buy">
-    <h2>Buy</h2>
+    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='USD'>USD</p>
     <p class="currency-rate" id="BUSD">2.55</p>
   </div>
   <img class='flag' src="img/united-states.png" alt="US">
   <div class="currency-sell">
-    <h2>Sale</h2>
+    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='USD'>USD</p>
     <p class="currency-rate" id="SUSD">2.60</p>
   </div>
 </div>
 <div class="currency-display">
   <div class="currency-buy">
-    <h2>Buy</h2>
+    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='EUR'>EUR</p>
     <p class="currency-rate" id="BEUR">2.68</p>
   </div>
   <img class='flag' src="img/european-union.png" alt="US">
   <div class="currency-sell">
-    <h2>Sale</h2>
+    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='EUR'>EUR</p>
     <p class="currency-rate" id="SEUR">2.77</p>
   </div>
 </div>
    <div class="currency-display">
   <div class="currency-buy">
-    <h2>Buy</h2>
+    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='GBP'>GBP</p>
     <p class="currency-rate" id="BGBP">3.05</p>
   </div>
   <img class='flag' src="img/united-kingdom.png" alt="US">
   <div class="currency-sell">
-    <h2>Sale</h2>
+    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='GBP'>GBP</p>
     <p class="currency-rate" id="SGBP">3.12</p>
   </div>
 </div>
  <div class="currency-display">
   <div class="currency-buy">
-    <h2>Buy</h2>
+    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='RUB'>RUB</p>
     <p class="currency-rate" id="BRUB">0.032</p>
   </div>
   <img class='flag' src="img/russia.png" alt="US">
   <div class="currency-sell">
-    <h2>Sale</h2>
+    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='RUB'>RUB</p>
     <p class="currency-rate" id="SRUB">0.035</p>
   </div>
@@ -101,13 +101,13 @@
   <div class="more-info">
    <div class="currency-display">
   <div class="currency-buy">
-    <h2>Buy</h2>
+    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='RUB'>RUB</p>
     <p class="currency-rate" id="BRUB">0.032</p>
   </div>
   <img class='flag' src="img/russia.png" alt="US">
   <div class="currency-sell">
-    <h2>Sale</h2>
+    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='RUB'>RUB</p>
     <p class="currency-rate" id="SRUB">0.035</p>
   </div>
@@ -139,8 +139,8 @@
           Rate
         </button>
         <select id="currencyTransaction">
-            <option value="BUY">BUY</option>
-            <option value="SELL">SELL</option>
+            <option value="BUY">Buy</option>
+            <option value="SELL">Sale</option>
         </select>
         <div class="rate" id="rate"></div>
       </div>
