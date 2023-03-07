@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurencyCenter Copy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <linkrel="stylesheet"href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand col-xxl-2 col-xl-3 col-lg-3 col-7" href="#">
+    TbExchanger
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav col-xxl-6 col-xl-7 col-lg-9 offset-xxl-4 offset-xl-2">
+      <li class="nav-item">
+        <a class="nav-link lang" href="#">Currency</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link lang" href="#">Calculator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link lang" href="#">Information</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link lang" href="#">Map</a>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <select class="form-controll mr-sm-2 translate" id="language-select">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+        <option value="ge">GE</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<main>
+    <section class="Currency">
+       <div class="info-block">
+        <div class="currency-display">
+  <div class="currency-buy">
+    <h2>Buy</h2>
+    <p class="currency-name"  value='USD'>USD</p>
+    <p class="currency-rate" id="BUSD">2.55</p>
+  </div>
+  <img class='flag' src="img/united-states.png" alt="US">
+  <div class="currency-sell">
+    <h2>Sale</h2>
+    <p class="currency-name"  value='USD'>USD</p>
+    <p class="currency-rate" id="SUSD">2.60</p>
+  </div>
+</div>
+<div class="currency-display">
+  <div class="currency-buy">
+    <h2>Buy</h2>
+    <p class="currency-name"  value='EUR'>EUR</p>
+    <p class="currency-rate" id="BEUR">2.68</p>
+  </div>
+  <img class='flag' src="img/european-union.png" alt="US">
+  <div class="currency-sell">
+    <h2>Sale</h2>
+    <p class="currency-name"  value='EUR'>EUR</p>
+    <p class="currency-rate" id="SEUR">2.77</p>
+  </div>
+</div>
+   <div class="currency-display">
+  <div class="currency-buy">
+    <h2>Buy</h2>
+    <p class="currency-name"  value='GBP'>GBP</p>
+    <p class="currency-rate" id="BGBP">3.05</p>
+  </div>
+  <img class='flag' src="img/united-kingdom.png" alt="US">
+  <div class="currency-sell">
+    <h2>Sale</h2>
+    <p class="currency-name"  value='GBP'>GBP</p>
+    <p class="currency-rate" id="SGBP">3.12</p>
+  </div>
+</div>
+ <div class="currency-display">
+  <div class="currency-buy">
+    <h2>Buy</h2>
+    <p class="currency-name"  value='RUB'>RUB</p>
+    <p class="currency-rate" id="BRUB">0.032</p>
+  </div>
+  <img class='flag' src="img/russia.png" alt="US">
+  <div class="currency-sell">
+    <h2>Sale</h2>
+    <p class="currency-name"  value='RUB'>RUB</p>
+    <p class="currency-rate" id="SRUB">0.035</p>
+  </div>
+</div>
+  <div class="more-info">
+   <div class="currency-display">
+  <div class="currency-buy">
+    <h2>Buy</h2>
+    <p class="currency-name"  value='RUB'>RUB</p>
+    <p class="currency-rate" id="BRUB">0.032</p>
+  </div>
+  <img class='flag' src="img/russia.png" alt="US">
+  <div class="currency-sell">
+    <h2>Sale</h2>
+    <p class="currency-name"  value='RUB'>RUB</p>
+    <p class="currency-rate" id="SRUB">0.035</p>
+  </div>
+</div>
+    </div>
+           <button class="show-more-btn"><a href="#">Show more</a></button>
+   </div>
+    </section>
+       
+       <section class="calculator">
+          <h1>Currency Converter</h1>
+    <p>Live Exchange Rates</p>
+    <div id="line"></div>
+    <p>Choose the currency and the amounts to get the exchange rate</p>
+
+    <div class="container">
+      <div class="currency">
+        <select id="currency-one">
+          <option value="USD" selected>USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GEL">RUB</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <input type="number" id="amount-one" placeholder="0" value="1" />
+      </div>
+
+      <div class="swap-rate-container">
+        <button class="btn" id="swap">
+          Rate
+        </button>
+        <select id="currencyTransaction">
+            <option value="BUY">BUY</option>
+            <option value="SELL">SELL</option>
+        </select>
+        <div class="rate" id="rate"></div>
+      </div>
+
+      <div class="currency">
+        <select id="currency-two">
+          <option value="GEL" selected>GEL</option>
+        </select>
+        <input type="number" id="amount-two" placeholder="0" />
+      </div>
+    </div>
+           
+       </section>
+        
+    <section class="schedule">
+            <h1>Information</h1>
+            <div class="container">
+            <div class="contactInfo">
+               <div class="box">
+                <div class="icon"><ion-icon name="location-outline"></ion-icon></div>
+                <div class="text">
+                    <h3>Adress</h3>
+                    <p>Katevan street, Dedofali, 20</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>+7-999-999-99-99</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>example@gmail.com</p>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+            <div class="container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus dolorem, repellendus veniam quas nostrum deleniti accusantium, in sit eum debitis. Deleniti temporibus vel recusandae, nobis commodi est provident quaerat!</p>
+                <div class="tables">
+                    <div class="left">
+                        <h2>Schedule</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda enim, sapiente magnam. Nostrum tempora ullam, natus praesentium deleniti, corporis beatae fugit delectus voluptatem quisquam ipsam quam omnis, molestias magnam dicta.</p>
+                        <button type="button" class="downloadSchedule">Download</button>
+                    </div>
+                    <div class="right map">
+                        <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A6c314afcea9492e056457ced3b6cfc954b106f31d3715b6cf764c7f574a5555b&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/myJScode.js"></script>
+      
+</body>
+</html>
