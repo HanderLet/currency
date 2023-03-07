@@ -93,6 +93,9 @@ const translations = {
     map: 'Map',
     buy: 'Buy',
     sale: 'Sale',
+    converter:'Currency Converter',
+    live:'Live Exchange Rates',
+    choose:'Choose the currency and the amounts to get the exchange rate',
   },
   ru: {
     currency: 'Курс',
@@ -101,6 +104,9 @@ const translations = {
     map: 'Карта',
     buy: 'Купля',
     sale: 'Продажа',
+    converter:'Конвертер валют',
+    live:'Текущие обменные курсы',
+    choose:'Выберите валюту и суммы, чтобы узнать обменный курс',
   },
   ge: {
     currency: 'კარგად',
@@ -109,6 +115,9 @@ const translations = {
     map: 'რუკა',
     buy: 'ყიდვა',
     sale: 'გაყიდვა',
+    converter:'კონვერტორი ვალუტები',
+    live:'მიმდინარე კურსები',
+    choose:'ვალუტის კურსის გასარკვევად აირჩიეთ ვალუტა და თანხები',
   },
 };
 
@@ -120,7 +129,10 @@ const infoElement = document.querySelector('#info');
 const mapElement = document.querySelector('#map');
 const buyElement = document.querySelectorAll('.buy');
 const saleElement = document.querySelectorAll('.sale');
-
+const converterElement = document.querySelector('#converter');
+const liveElement = document.querySelector('#live');
+const chooseElement = document.querySelector('#choose');
+const info2Element = document.querySelector('#info2');
 // Добавляем обработчик событий на изменение значения в select
 languageSelect.addEventListener('change', (event) => {
   const selectedLanguage = event.target.value;
@@ -129,21 +141,21 @@ languageSelect.addEventListener('change', (event) => {
   calcElement.textContent = translations[selectedLanguage].calc;
   infoElement.textContent = translations[selectedLanguage].info;
   mapElement.textContent = translations[selectedLanguage].map;
+  converterElement.textContent = translations[selectedLanguage].converter;
+  liveElement.textContent = translations[selectedLanguage].live;
+  chooseElement.textContent = translations[selectedLanguage].choose;
+  info2Element.textContent = translations[selectedLanguage].info;
 });
 languageSelect.addEventListener('change', function() {
   const selectedLang = languageSelect.value;
   buyElement.forEach(element => {
     const originalText = element.innerText;
     element.innerText = translations[selectedLang].buy;
-  });
 });
-languageSelect.addEventListener('change', function() {
-  const selectedLang = languageSelect.value;
-  saleElement.forEach(element => {
+    saleElement.forEach(element => {
     const originalText = element.innerText;
     element.innerText = translations[selectedLang].sale;
   });
 });
-  /*buyElement.textContent = translations[selectedLanguage].buy;
-  saleElement.textContent = translations[selectedLanguage].sale;*/
+
 

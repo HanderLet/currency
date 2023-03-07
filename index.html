@@ -113,15 +113,15 @@
   </div>
 </div>
     </div>
-           <button class="show-more-btn"><a href="#">Show more</a></button>
+           <button class="show-more-btn"><a href="#">● ● ●</a></button>
    </div>
     </section>
        
        <section class="calculator">
-          <h1>Currency Converter</h1>
-    <p>Live Exchange Rates</p>
+          <h1 id="converter">Currency Converter</h1>
+    <p id="live">Live Exchange Rates</p>
     <div id="line"></div>
-    <p>Choose the currency and the amounts to get the exchange rate</p>
+    <p id="choose">Choose the currency and the amounts to get the exchange rate</p>
 
     <div class="container">
       <div class="currency">
@@ -139,8 +139,8 @@
           Rate
         </button>
         <select id="currencyTransaction">
-            <option value="BUY">Buy</option>
-            <option value="SELL">Sale</option>
+            <option class="buy" value="BUY">Buy</option>
+            <option class="sale" value="SELL">Sale</option>
         </select>
         <div class="rate" id="rate"></div>
       </div>
@@ -156,7 +156,7 @@
        </section>
         
     <section class="schedule">
-            <h1>Information</h1>
+            <h1 id="info2">Information</h1>
             <div class="container">
             <div class="contactInfo">
                <div class="box">
