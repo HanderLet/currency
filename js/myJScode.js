@@ -85,4 +85,65 @@ calculate()
 
 
 
+const translations = {
+  en: {
+    currency: 'Currency',
+    calc: 'Calculator',
+    info: 'Information',
+    map: 'Map',
+    buy: 'Buy',
+    sale: 'Sale',
+  },
+  ru: {
+    currency: 'Курс',
+    calc: 'Калькулятор',
+    info: 'Информация',
+    map: 'Карта',
+    buy: 'Купля',
+    sale: 'Продажа',
+  },
+  ge: {
+    currency: 'კარგად',
+    calc: 'კალკულატორი',
+    info: 'ინფორმაცია',
+    map: 'რუკა',
+    buy: 'ყიდვა',
+    sale: 'გაყიდვა',
+  },
+};
+
+// Получаем элементы на странице
+const languageSelect = document.querySelector('#language-select');
+const currencyElement = document.querySelector('#currency');
+const calcElement = document.querySelector('#calc');
+const infoElement = document.querySelector('#info');
+const mapElement = document.querySelector('#map');
+const buyElement = document.querySelectorAll('.buy');
+const saleElement = document.querySelectorAll('.sale');
+
+// Добавляем обработчик событий на изменение значения в select
+languageSelect.addEventListener('change', (event) => {
+  const selectedLanguage = event.target.value;
+    
+  currencyElement.textContent = translations[selectedLanguage].currency;
+  calcElement.textContent = translations[selectedLanguage].calc;
+  infoElement.textContent = translations[selectedLanguage].info;
+  mapElement.textContent = translations[selectedLanguage].map;
+});
+languageSelect.addEventListener('change', function() {
+  const selectedLang = languageSelect.value;
+  buyElement.forEach(element => {
+    const originalText = element.innerText;
+    element.innerText = translations[selectedLang].buy;
+  });
+});
+languageSelect.addEventListener('change', function() {
+  const selectedLang = languageSelect.value;
+  saleElement.forEach(element => {
+    const originalText = element.innerText;
+    element.innerText = translations[selectedLang].sale;
+  });
+});
+  /*buyElement.textContent = translations[selectedLanguage].buy;
+  saleElement.textContent = translations[selectedLanguage].sale;*/
 

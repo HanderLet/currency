@@ -1,6 +1,10 @@
 .navbar{
     background: black;
 }
+.nav-link:hover,
+.navbar-brand:hover{
+    color: silver;
+}
 .navbar-brand{
     color: #fff
 }
@@ -28,10 +32,9 @@ nav li{
 }
 
 .Currency{
-    background: url(../img/-14.jpg) no-repeat;
+    background: url(../img/-14.jpg);
     background-size: 100%;
     padding-top: 10px;
-    
 }
 
 .currency-display {
@@ -75,7 +78,9 @@ nav li{
   font-size: 20px;
   margin-top: 0px;
 }
-
+.more-info{
+    
+}
 .schedule{
     width: 100%;
     min-height: 140vh;
@@ -265,8 +270,8 @@ nav li{
 
 
 @media (max-width: 991px){
-    currency-delay{
-        
+    .Currency{
+        background: #785541;
     }
     
     .currency-buy,
@@ -275,7 +280,9 @@ nav li{
         margin: 0;
         padding: 0;
     }
-    
+    .flag{
+        margin-top: 1.8em;
+    }
     .container{
         width: 100%;
         display: flex;
