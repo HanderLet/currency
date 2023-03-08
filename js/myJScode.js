@@ -88,14 +88,24 @@ currencyEl_one.otherCurrency = currencyEl_two;
 currencyEl_two.otherCurrency = currencyEl_one;
 
 //делаем коллбэк функцию принимающую инфу о событии
+
 function hideCurrencyOption(event) 
 {
   
   var otherCurrency = event.currentTarget.otherCurrency;
   
   // берем из ивента новое значение текущего селекта
-  var newOptionValue = $(event.currentTarget)
-     .children("option[selected]").val();
+
+  $(event.currentTarget)
+   .children("option[selected]")
+   .attr("selected", false);
+
+  
+  var newOptionValue = event.target.value;
+
+  $(event.currentTarget)
+   .children(`option[value=${newOptionValue}]`)
+   .attr("selected", true);
 
 
   // hidden элемент в другом селекте делаем видимым  
