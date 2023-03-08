@@ -83,6 +83,37 @@ amountEl_two.addEventListener('input', calculate);
 calculate()
 
 
+//втыкаем в каждый селект ссылку на другой
+currencyEl_one.otherCurrency = currencyEl_two;
+currencyEl_two.otherCurrency = currencyEl_one;
+
+//делаем коллбэк функцию принимающую инфу о событии
+function hideCurrencyOption(event) 
+{
+  
+  var otherCurrency = event.currentTarget.otherCurrency;
+  
+  // берем из ивента новое значение текущего селекта
+  var newOptionValue = $(event.currentTarget)
+     .children("option[selected]").val();
+
+
+  // hidden элемент в другом селекте делаем видимым  
+  $(otherCurrency)
+    .children("option[hidden]")
+    .attr("hidden", false);
+
+
+  // элемент, который мы получили из события в текущем селекте 
+  // делаем невидимым в другом селекте
+  $(otherCurrency)
+    .children(`option[value=${newOptionValue}]`)
+    .attr("hidden", true)
+}
+
+// добавляем прослушивание
+currencyEl_one.addEventListener('change', hideCurrencyOption);
+currencyEl_two.addEventListener('change', hideCurrencyOption);
 
 
 const translations = {
