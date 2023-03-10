@@ -99,18 +99,6 @@
   </div>
 </div>
   <div class="more-info">
-   <div class="currency-display">
-  <div class="currency-buy">
-    <h2 class="buy">Buy</h2>
-    <p class="currency-name"  value='RUB'>RUB</p>
-    <p class="currency-rate" id="BRUB">0.032</p>
-  </div>
-  <img class='flag' src="img/russia.png" alt="US">
-  <div class="currency-sell">
-    <h2 class="sale">Sale</h2>
-    <p class="currency-name"  value='RUB'>RUB</p>
-    <p class="currency-rate" id="SRUB">0.035</p>
-  </div>
 </div>
     </div>
            <button class="show-more-btn"><a href="#">● ● ●</a></button>
@@ -124,32 +112,34 @@
     <p id="choose">Choose the currency and the amounts to get the exchange rate</p>
 
     <div class="container">
+      
       <div class="currency">
         <select id="currency-one">
           <option value="USD">USD</option>
           <option value="EUR" hidden="hidden">EUR</option>
           <option value="RUB">RUB</option>
           <option value="GBP">GBP</option>
-          <option value="GEL" selected>GEL</option>
+          <option value="GEL" selected="selected">GEL</option>
         </select>
         <input type="number" id="amount-one" placeholder="0" value="1" />
       </div>
 
       <div class="swap-rate-container">
         <button class="btn" id="swap">
-          Rate
+          Swap
         </button>
         <select id="currencyTransaction">
-            <option class="buy" value="BUY">Buy</option>
-            <option class="sale" value="SELL">Sale</option>
+          <option class="buy" value="Buy">Buy</option>
+          <option class="sale" value="Sell">Sale</option>
         </select>
+        
         <div class="rate" id="rate"></div>
       </div>
 
       <div class="currency">
         <select id="currency-two">
           <option value="GEL" hidden="hidden">GEL</option>
-          <option value="EUR" selected>EUR</option>
+          <option value="EUR" selected="selected">EUR</option>
           <option value="RUB">RUB</option>
           <option value="GBP">GBP</option>
           <option value="USD">USD</option>
