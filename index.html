@@ -5,111 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CurencyCenter Copy</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <linkrel="stylesheet"href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
 <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand col-xxl-2 col-xl-3 col-lg-3 col-7" href="#">
+  <a class="navbar-brand col-xxl-3 col-xl-3 col-lg-3 col-5" href="#">
     TbExchanger
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav col-xxl-6 col-xl-7 col-lg-9 offset-xxl-4 offset-xl-2">
       <li class="nav-item">
-        <a class="nav-link" id="currency" href="#">Currency</a>
+        <a class="nav-link currency" href="#">Currency</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="calc" href="#">Calculator</a>
+        <a class="nav-link calc" href="#">Calculator</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="info" href="#">Information</a>
+        <a class="nav-link info" href="#">Information</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="map" href="#">Map</a>
+        <a class="nav-link map" href="#">Map</a>
       </li>
     </ul>
     <div class="form-inline my-2 my-lg-0">
-      <select class="form-controll mr-sm-2" id="language-select">
+      <select class="form-controll mr-sm-2" id="language-select2">
         <option value="en">EN</option>
         <option value="ru">RU</option>
         <option value="ge">GE</option>
       </select>
     </div>
   </div>
+  <div class="col-5 d-flex justify-content-center flex-column align-items-center d-lg-none">
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item currency" href="#">Currency</a></li>
+            <li><a class="dropdown-item calc" href="#">Calculator</a></li>
+            <li><a class="dropdown-item info" href="#">Information</a></li>
+            <li><a class="dropdown-item map" href="#">Map</a></li>
+            <li><select class="form-controll mr-sm-2" id="language-select">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+              <option value="ge">GE</option>
+            </select></li>
+        </ul>
+    </div>
+</div>
 </nav>
 
 <main>
     <section class="Currency">
        <div class="info-block">
         <div class="currency-display">
+          <img class='flag' src="img/united-states.png" alt="US">
   <div class="currency-buy">
-    <h2 class="buy">Buy</h2>
+    <h2 class="buy">Sale</h2>
     <p class="currency-name"  value='USD'>USD</p>
     <p class="currency-rate" id="BUSD">2.55</p>
-  </div>
-  <img class='flag' src="img/united-states.png" alt="US">
+  </div> 
+  
   <div class="currency-sell">
-    <h2 class="sale">Sale</h2>
+    <h2 class="sale">Buy</h2>
     <p class="currency-name"  value='USD'>USD</p>
     <p class="currency-rate" id="SUSD">2.60</p>
   </div>
 </div>
 <div class="currency-display">
   <div class="currency-buy">
-    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='EUR'>EUR</p>
     <p class="currency-rate" id="BEUR">2.68</p>
   </div>
   <img class='flag' src="img/european-union.png" alt="US">
   <div class="currency-sell">
-    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='EUR'>EUR</p>
     <p class="currency-rate" id="SEUR">2.77</p>
   </div>
 </div>
    <div class="currency-display">
   <div class="currency-buy">
-    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='GBP'>GBP</p>
     <p class="currency-rate" id="BGBP">3.05</p>
   </div>
   <img class='flag' src="img/united-kingdom.png" alt="US">
   <div class="currency-sell">
-    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='GBP'>GBP</p>
     <p class="currency-rate" id="SGBP">3.12</p>
   </div>
 </div>
  <div class="currency-display">
   <div class="currency-buy">
-    <h2 class="buy">Buy</h2>
     <p class="currency-name"  value='RUB'>RUB</p>
     <p class="currency-rate" id="BRUB">0.032</p>
   </div>
   <img class='flag' src="img/russia.png" alt="US">
   <div class="currency-sell">
-    <h2 class="sale">Sale</h2>
     <p class="currency-name"  value='RUB'>RUB</p>
     <p class="currency-rate" id="SRUB">0.035</p>
   </div>
 </div>
-  <div class="more-info">
-</div>
-    </div>
-           <button class="show-more-btn"><a href="#">● ● ●</a></button>
+    <div class="show-more-btn">
+           
    </div>
     </section>
        
        <section class="calculator">
-          <h1 id="converter">Currency Converter</h1>
-    <p id="live">Live Exchange Rates</p>
+        <div class="containerr">
+          <h1 class="converter">Currency Converter</h1>
+    <p class="live">Live Exchange Rates</p>
     <div id="line"></div>
-    <p id="choose">Choose the currency and the amounts to get the exchange rate</p>
+    <p class="choose">Choose the currency and the amounts to get the exchange rate</p>
 
     <div class="container">
       
@@ -125,14 +133,15 @@
       </div>
 
       <div class="swap-rate-container">
+        <div class="selectors">
         <button class="btn" id="swap">
           Swap
         </button>
         <select id="currencyTransaction">
-          <option class="buy" value="Buy">Buy</option>
-          <option class="sale" value="Sell">Sale</option>
+          <option class="sale" value="Buy">Buy</option>
+          <option class="buy" value="Sale">Sale</option>
         </select>
-        
+      </div>
         <div class="rate" id="rate"></div>
       </div>
 
@@ -147,11 +156,12 @@
         <input type="number" id="amount-two" placeholder="0" />
       </div>
     </div>
+    </div>
+    
            
        </section>
-        
     <section class="schedule">
-            <h1 id="info2">Information</h1>
+            <h1 class="information">Information</h1>
             <div class="container">
             <div class="contactInfo">
                <div class="box">
@@ -183,22 +193,70 @@
                 <div class="tables">
                     <div class="left">
                         <h2>Schedule</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda enim, sapiente magnam. Nostrum tempora ullam, natus praesentium deleniti, corporis beatae fugit delectus voluptatem quisquam ipsam quam omnis, molestias magnam dicta.</p>
-                        <button type="button" class="downloadSchedule">Download</button>
+                        <table border="3">
+                          <thead>
+                            <th id="">Дни</th>
+                            <th id="">Время работы</th>
+                            <th id="">Перерывы</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td id="">Понедельник</td>
+                              <td>11:00-20:00</td>
+                              <td>14:00-15:00</td>
+                            </tr>
+                            <tr>
+                              <td id="">Вторник</td>
+                              <td>11:00-20:00</td>
+                              <td>14:00-15:00</td>
+                            </tr>
+                            <tr>
+                              <td id="">Среда</td>
+                              <td>11:00-20:00</td>
+                              <td>14:00-15:00</td>
+                            </tr>
+                            <tr>
+                              <td id="">Четверг</td>
+                              <td>11:00-20:00</td>
+                              <td>14:00-15:00</td>
+                            </tr>
+                            <tr>
+                              <td id="">Пятница</td>
+                              <td>11:00-20:00</td>
+                              <td>14:00-15:00</td>
+                            </tr>
+                            <tr>
+                              <td id="">Суббота</td>
+                              <td>11:00-20:00</td>
+                              <td>14:00-15:00</td>
+                            </tr>
+                            <tr>
+                              <td id="">Воскресенье</td>
+                              <td>11:00-20:00</td>
+                              <td>14:00-15:00</td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
                     <div class="right map">
+                      <div class="center">
                         <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A6c314afcea9492e056457ced3b6cfc954b106f31d3715b6cf764c7f574a5555b&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                      </div>
                     </div>
                 </div>
             </div>
         </section>
 </main>
+<footer>
+  <div class="footer">
+    <h1>Copyright 2023 Khubua©. Design by Web</h1>
+  </div>
+</footer>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.6.1.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/myJScode.js"></script>
       
 </body>

@@ -1,15 +1,27 @@
+:root {
+    --primary-color: #041f80;
+  }
+
 .navbar{
-    background: black;
+    background: #041f80;
 }
 .nav-link:hover,
 .navbar-brand:hover{
     color: silver;
 }
 .navbar-brand{
-    color: #fff
+    color: #fff;
+    text-align: center;
+}
+.navbar-brand:disabled{
+    color: #fff;
 }
 .nav-link{
     color: #fff;
+}
+
+.dropdown-toggle{
+    background: #041f80;
 }
 
 .form-controll {
@@ -21,7 +33,7 @@
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
-    background-color: #0A0A0A;
+    background-color: #041f80;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
@@ -31,10 +43,21 @@ nav li{
     margin-right: 50px;
 }
 
+.show-more-btn{
+    width: 100%;
+    height: 50px;
+    background: #041f80;
+    border: none;
+    margin-top: 25px;
+    color: #fff;
+    cursor: default;
+}
+
+
 .Currency{
     background: url(../img/-14.jpg);
     background-size: 100%;
-    padding-top: 10px;
+    padding-top: 25px;
 }
 
 .currency-display {
@@ -42,49 +65,48 @@ nav li{
   justify-content: center;
 }
 .currency-display h2{
-    font-size: 1.8em
+    font-size: 2em;
+    padding: 25px 0;
 }
 .currency-buy,
 .currency-sell {
   background-color: #e0dada;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  width: 40%;
+  width: 28%;
   transition: 0.5s;
 }
-.currency-buy:hover,
-.currency-sell:hover {
-    background: silver;
-}
-.flag{
+
+.currency-display .flag{
     position: absolute;
     width: 60px;
     height: 60px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3.5em;
+}
+.currency-display .flag:nth-child(1){
+    margin-top: 8em;
+}
+.currency-display .flag:nth-child(2){
+    margin-top: 1.8em;
 }
 
 
 .currency-name {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 22px;
     margin-bottom: 8px;
-    padding: 0;
+    padding: 5px 0;
 }
 
 .currency-rate {
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 0px;
 }
-.more-info{
-    
-}
+
 .schedule{
     width: 100%;
-    min-height: 140vh;
-    background: #2223;
+    min-height: 120vh;
+    background: linear-gradient(90deg, rgba(204,204,204,1) 0%, rgba(242,236,236,1) 49%, rgba(204,204,204,1) 100%);
 }
 .schedule h1{
     display: flex;
@@ -92,6 +114,9 @@ nav li{
     justify-content: center;
     font-weight: 700;
     padding-top: 35px;
+}
+.schedule h2{
+    padding-bottom: 20px;
 }
 .schedule .tables{
     padding-top: 20px;
@@ -106,10 +131,10 @@ nav li{
     padding-top: 40px;
     height: 460px;
 }
-.schedule .downloadSchedule{
-    border-radius: 10px;
-    margin-top: 35px;
-    background: skyblue;
+.schedule td,th{
+    width: 200px;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
 
@@ -119,8 +144,8 @@ nav li{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    float: right;
     padding-top: 30px;
+    padding-left: 150px;
     height: 460px;
 }
 .container p{
@@ -130,26 +155,20 @@ nav li{
 
 
 
-.more-info {
-  display: none;
-}
-.show-more-btn{
-    width: 100%;
-    padding: 10px;
-    background: black;
-    margin-top: 10px;
-}
-.show-more-btn a{
-    color: #fff;
-    text-decoration: none;
-}
 
-:root {
-    --primary-color: #2BAFF7;
-  }
+
 
 .calculator{
-    padding: 100px 0;
+    padding: 70px 0;
+    background: radial-gradient(circle, rgba(242,236,236,1) 24%, rgba(204,204,204,1) 100%);
+}
+
+.containerr{
+    margin: 0 auto;
+    background: #fefefe;
+    border-radius: 25px;
+    width: 75%;
+    box-shadow: 6px 6px 5px grey;
 }
 
 .calculator h1 {
@@ -169,6 +188,7 @@ nav li{
     padding: 5px 12px;
     font-size: 20px;
     border: #5fbaa7;
+    width: 75px;
   }
 .calculator  .currency {
     padding: 40px 0;
@@ -178,7 +198,7 @@ nav li{
   }
 .calculator  #line{
     border: none;
-    border-bottom: 3px solid #2BAFF7;
+    border-bottom: 3px solid #041f80;
     width: 20%;
     margin: auto;
   }
@@ -187,7 +207,7 @@ nav li{
     background: transparent;
     font-size: 30px;
     text-align: right;
-    border-bottom: 2px solid silver;
+    border-bottom: 2px solid #0A0A0A;
     width: 50%
   }
 .calculator  .swap-rate-container {
@@ -202,24 +222,23 @@ nav li{
   }
 .calculator  select{
     width: 75px;
-    padding: 5px;
-    border: 2px solid #2BAFF7;
+    padding: 7px;
+    border: 2px solid #041f80;
     border-radius: 5px;
   }
+#currencyTransaction{
+    position: absolute;
+    margin-left: 1em;
+}
   select:focus,
   input:focus,
   button:focus {
     outline: 0;
   }
-  @media (max-width: 1000px) {
-    .currency input {
-      width: 200px;
-    }
-    .money-img{
-      width: 400px;
-    }
-  }
 
+.container{
+    width: 70%;
+}
 
 .container .contactInfo{
     width: 100%;
@@ -248,7 +267,7 @@ nav li{
 }
 .container .contactInfo .box:hover .icon{
     border-radius: 50%;
-    background: #00bcd4;
+    background: var(--primary-color);
     color: #fff;
 }
 .container .contactInfo .box .text{
@@ -256,31 +275,56 @@ nav li{
     flex-direction: column;
     text-align: center;
     font-size: 1.1em;
-    color: deepskyblue;
+    color: var(--primary-color);
     font-weight: 300;
 }
 .container .contactInfo .box .text h3{
     font-weight: 500;
-    color: #00bcd4;
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+footer{
+    width: 100%;
+    height: 70px;
+    background: #041f80;
+}
+footer h1{
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    font-size: 21px;
+}
 
+@media (max-width: 1000px) {
+    .currency input {
+      width: 200px;
+    }
+    .money-img{
+      width: 400px;
+    }
+  }
+  
 @media (max-width: 991px){
     .Currency{
         background: #785541;
     }
-    
+    .selectors{
+        display: flex;
+        flex-direction: column;
+    }
+    #currencyTransaction{
+        position: relative;
+        margin-left: 0;
+        margin-top: 5px;
+    }
     .currency-buy,
     .currency-sell{
         width: 50%;
         margin: 0;
         padding: 0;
-    }
-    .flag{
-        margin-top: 1.8em;
     }
     .container{
         width: 100%;
@@ -294,6 +338,9 @@ nav li{
         display: contents;
         flex-direction: column;
     }
+    .schedule .right{
+        padding: 0;
+    }
     .schedule .tables{
         display: flex;
         align-items: center;
@@ -301,14 +348,20 @@ nav li{
         flex-direction: column;
     }
     .schedule .left{
-        width: 100%;
+        width: 90%;
         padding-top: 5px;
         text-align: center;
     }
+    .right.map{
+        width: 100%;
+    }
     iframe{
-        width: 350px;
+        width: 22em;
     }
     .container .contactInfo .box .icon{
         border-radius: 50%;
+    }
+    footer h1{
+        font-size: 15px;
     }
 }

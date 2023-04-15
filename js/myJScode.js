@@ -2,10 +2,6 @@ const showMoreBtn = document.querySelector('.show-more-btn');
 const moreInfo = document.querySelector('.more-info');
 var swapBtn = document.getElementById("swap");
 
-showMoreBtn.addEventListener('click', () => {
-   moreInfo.style.display = 'block';
-    showMoreBtn.style.display = 'none';
-});
 
 const usdB = document.getElementById('BUSD').textContent;
 const eurB = document.getElementById('BEUR').textContent;
@@ -215,20 +211,22 @@ const translations = {
 
 // Получаем элементы на странице
 const languageSelect = document.querySelector('#language-select');
-const currencyElement = document.querySelector('#currency');
-const calcElement = document.querySelector('#calc');
-const infoElement = document.querySelector('#info');
-const mapElement = document.querySelector('#map');
+const languageSelect2 = document.querySelector('#language-select2');
+const currencyElement = document.querySelector('.currency');
+const calcElement = document.querySelector('.calc')
+const infoElement = document.querySelector('.info');
+const mapElement = document.querySelector('.map');
+const converterElement2 = document.querySelector('.converter');
 const buyElement = document.querySelectorAll('.buy');
 const saleElement = document.querySelectorAll('.sale');
-const converterElement = document.querySelector('#converter');
-const liveElement = document.querySelector('#live');
-const chooseElement = document.querySelector('#choose');
-const info2Element = document.querySelector('#info2');
+const converterElement = document.querySelector('.converter');
+const liveElement = document.querySelector('.live');
+const chooseElement = document.querySelector('.choose');
+const informationElement = document.querySelector('.information');
 // Добавляем обработчик событий на изменение значения в select
-languageSelect.addEventListener('change', (event) => {
+languageSelect2.addEventListener('change', (event) => {
   const selectedLanguage = event.target.value;
-    
+
   currencyElement.textContent = translations[selectedLanguage].currency;
   calcElement.textContent = translations[selectedLanguage].calc;
   infoElement.textContent = translations[selectedLanguage].info;
@@ -236,7 +234,23 @@ languageSelect.addEventListener('change', (event) => {
   converterElement.textContent = translations[selectedLanguage].converter;
   liveElement.textContent = translations[selectedLanguage].live;
   chooseElement.textContent = translations[selectedLanguage].choose;
-  info2Element.textContent = translations[selectedLanguage].info;
+  informationElement.textContent = translations[selectedLanguage].info;
+  buyElement.textContent = translations[selectedLanguage].buy;
+  saleElement.textContent = translations[selectedLanguage].sale;
+});
+
+languageSelect.addEventListener('change', (event) => {
+  const selectedLanguage = event.target.value;
+
+  currencyElement.textContent = translations[selectedLanguage].currency;
+  calcElement.textContent = translations[selectedLanguage].calc;
+  infoElement.textContent = translations[selectedLanguage].info;
+  mapElement.textContent = translations[selectedLanguage].map;
+  
+  converterElement.textContent = translations[selectedLanguage].converter;
+  liveElement.textContent = translations[selectedLanguage].live;
+  chooseElement.textContent = translations[selectedLanguage].choose;
+  informationElement.textContent = translations[selectedLanguage].info;
 });
 languageSelect.addEventListener('change', function() {
   const selectedLang = languageSelect.value;
@@ -249,5 +263,6 @@ languageSelect.addEventListener('change', function() {
     element.innerText = translations[selectedLang].sale;
   });
 });
+
 
 
