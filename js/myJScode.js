@@ -184,6 +184,20 @@ const translations = {
     converter:'Currency Converter',
     live:'Live Exchange Rates',
     choose:'Choose the currency and the amounts to get the exchange rate',
+    address:'Address',
+    phone:'Phone',
+    email:'Email',
+    schedule:'Schedule',
+    days:'Days',
+    workTime:'Work time',
+    break:'Break',
+    monday:'Monday',
+    tuesday:'Tuesday',
+    wednesday:'Wednesday',
+    thursday:'Thursday',
+    friday:'Friday',
+    saturday:'Saturday',
+    sunday:'Sunday'
   },
   ru: {
     currency: 'Курс',
@@ -195,6 +209,20 @@ const translations = {
     converter:'Конвертер валют',
     live:'Текущие обменные курсы',
     choose:'Выберите валюту и суммы, чтобы узнать обменный курс',
+    address:'Адрес',
+    phone:'Телефон',
+    email:'Почта',
+    schedule:'Расписание',
+    days:'Дни',
+    workTime:'Время работы',
+    break:'Перерыв',
+    monday:'Понедельник',
+    tuesday:'Вторник',
+    wednesday:'Среда',
+    thursday:'Четверг',
+    friday:'Пятница',
+    saturday:'Суббота',
+    sunday:'Воскресенье'
   },
   ge: {
     currency: 'კარგად',
@@ -206,6 +234,20 @@ const translations = {
     converter:'კონვერტორი ვალუტები',
     live:'მიმდინარე კურსები',
     choose:'ვალუტის კურსის გასარკვევად აირჩიეთ ვალუტა და თანხები',
+    address:'მისამართი',
+    phone:'ტელეფონი',
+    email:'ფოსტა',
+    schedule:'განრიგი',
+    days:'დღეები',
+    workTime:'Სამუშაო საათები',
+    break:'შესვენება',
+    monday:'ორშაბათი',
+    tuesday:'სამშაბათი',
+    wednesday:'ოთხშაბათი',
+    thursday:'ხუთშაბათი',
+    friday:'პარასკევი',
+    saturday:'შაბათი',
+    sunday:'კვირა'
   },
 };
 
@@ -216,27 +258,64 @@ const currencyElement = document.querySelector('.currency');
 const calcElement = document.querySelector('.calc')
 const infoElement = document.querySelector('.info');
 const mapElement = document.querySelector('.map');
-const converterElement2 = document.querySelector('.converter');
+const currencyElement2 = document.querySelector('.currency2');
+const calcElement2 = document.querySelector('.calc2')
+const infoElement2 = document.querySelector('.info2');
+const mapElement2 = document.querySelector('.map2');
+
 const buyElement = document.querySelectorAll('.buy');
 const saleElement = document.querySelectorAll('.sale');
+
 const converterElement = document.querySelector('.converter');
 const liveElement = document.querySelector('.live');
 const chooseElement = document.querySelector('.choose');
+
 const informationElement = document.querySelector('.information');
+const addressElement = document.querySelector('.address');
+const phoneElement = document.querySelector('.phone');
+const emailElement = document.querySelector('.email');
+const scheduleElement = document.querySelector('.schedulee');
+const daysElement = document.querySelector('.days');
+const workTimeElement = document.querySelector('.workTime');
+const breakElement = document.querySelector('.break');
+const mondayElement = document.querySelector('.monday');
+const tuesdayElement = document.querySelector('.tuesday');
+const wednesdayElement = document.querySelector('.wednesday');
+const thursdayElement = document.querySelector('.thursday');
+const fridayElement = document.querySelector('.friday');
+const saturdayElement = document.querySelector('.saturday');
+const sundayElement = document.querySelector('.sunday');
+
 // Добавляем обработчик событий на изменение значения в select
 languageSelect2.addEventListener('change', (event) => {
   const selectedLanguage = event.target.value;
 
-  currencyElement.textContent = translations[selectedLanguage].currency;
-  calcElement.textContent = translations[selectedLanguage].calc;
-  infoElement.textContent = translations[selectedLanguage].info;
-  mapElement.textContent = translations[selectedLanguage].map;
+  currencyElement2.textContent = translations[selectedLanguage].currency;
+  calcElement2.textContent = translations[selectedLanguage].calc;
+  infoElement2.textContent = translations[selectedLanguage].info;
+  mapElement2.textContent = translations[selectedLanguage].map;
+
   converterElement.textContent = translations[selectedLanguage].converter;
   liveElement.textContent = translations[selectedLanguage].live;
   chooseElement.textContent = translations[selectedLanguage].choose;
+
   informationElement.textContent = translations[selectedLanguage].info;
   buyElement.textContent = translations[selectedLanguage].buy;
   saleElement.textContent = translations[selectedLanguage].sale;
+  addressElement.textContent = translations[selectedLanguage].address;
+  phoneElement.textContent = translations[selectedLanguage].phone;
+  emailElement.textContent = translations[selectedLanguage].email;
+  scheduleElement.textContent = translations[selectedLanguage].schedule;
+  daysElement.textContent = translations[selectedLanguage].days;
+  workTimeElement.textContent = translations[selectedLanguage].workTime;
+  breakElement.textContent = translations[selectedLanguage].break;
+  mondayElement.textContent = translations[selectedLanguage].monday;
+  tuesdayElement.textContent = translations[selectedLanguage].tuesday;
+  wednesdayElement.textContent = translations[selectedLanguage].wednesday;
+  thursdayElement.textContent = translations[selectedLanguage].thursday;
+  fridayElement.textContent = translations[selectedLanguage].friday;
+  saturdayElement.textContent = translations[selectedLanguage].saturday;
+  sundayElement.textContent = translations[selectedLanguage].sunday;
 });
 
 languageSelect.addEventListener('change', (event) => {
@@ -250,7 +329,22 @@ languageSelect.addEventListener('change', (event) => {
   converterElement.textContent = translations[selectedLanguage].converter;
   liveElement.textContent = translations[selectedLanguage].live;
   chooseElement.textContent = translations[selectedLanguage].choose;
+
   informationElement.textContent = translations[selectedLanguage].info;
+  addressElement.textContent = translations[selectedLanguage].address;
+  phoneElement.textContent = translations[selectedLanguage].phone;
+  emailElement.textContent = translations[selectedLanguage].email;
+  scheduleElement.textContent = translations[selectedLanguage].schedule;
+  daysElement.textContent = translations[selectedLanguage].days;
+  workTimeElement.textContent = translations[selectedLanguage].workTime;
+  breakElement.textContent = translations[selectedLanguage].break;
+  mondayElement.textContent = translations[selectedLanguage].monday;
+  tuesdayElement.textContent = translations[selectedLanguage].tuesday;
+  wednesdayElement.textContent = translations[selectedLanguage].wednesday;
+  thursdayElement.textContent = translations[selectedLanguage].thursday;
+  fridayElement.textContent = translations[selectedLanguage].friday;
+  saturdayElement.textContent = translations[selectedLanguage].saturday;
+  sundayElement.textContent = translations[selectedLanguage].sunday;
 });
 languageSelect.addEventListener('change', function() {
   const selectedLang = languageSelect.value;
@@ -263,6 +357,7 @@ languageSelect.addEventListener('change', function() {
     element.innerText = translations[selectedLang].sale;
   });
 });
+
 
 
 
