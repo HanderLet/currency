@@ -16,16 +16,16 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav col-xxl-6 col-xl-7 col-lg-9 offset-xxl-4 offset-xl-2">
       <li class="nav-item">
-        <a class="nav-link currency2" href="#">Currency</a>
+        <a class="nav-link currency2" href="#Currency">Currency</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link calc2" href="#">Calculator</a>
+        <a class="nav-link calc2" href="#Calculator">Calculator</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link info2" href="#">Information</a>
+        <a class="nav-link info2" href="#Information">Information</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link map map2" href="#">Map</a>
+        <a class="nav-link map2" href="#Map">Map</a>
       </li>
     </ul>
     <div class="form-inline my-2 my-lg-0">
@@ -43,10 +43,10 @@
         </a>
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item currency" href="#">Currency</a></li>
-            <li><a class="dropdown-item calc" href="#">Calculator</a></li>
-            <li><a class="dropdown-item info" href="#">Information</a></li>
-            <li><a class="dropdown-item map" href="#">Map</a></li>
+            <li><a class="dropdown-item currency" href="#Currency">Currency</a></li>
+            <li><a class="dropdown-item calc" href="#Calculator">Calculator</a></li>
+            <li><a class="dropdown-item info" href="#Information">Information</a></li>
+            <li><a class="dropdown-item map" href="#Map">Map</a></li>
             <li><select class="form-controll mr-sm-2" id="language-select">
               <option value="en">EN</option>
               <option value="ru">RU</option>
@@ -58,7 +58,7 @@
 </nav>
 
 <main>
-    <section class="Currency">
+    <section class="Currency" id="Currency">
        <div class="info-block">
         <div class="currency-display">
           <img class='flag' src="img/united-states.png" alt="US">
@@ -112,7 +112,7 @@
    </div>
     </section>
        
-       <section class="calculator">
+       <section class="calculator" id="Calculator">
         <div class="containerr">
           <h1 class="converter">Currency Converter</h1>
     <p class="live">Live Exchange Rates</p>
@@ -135,7 +135,7 @@
       <div class="swap-rate-container">
         <div class="selectors">
         <button class="btn" id="swap">
-          Swap
+          <ion-icon name="arrow-down-outline"></ion-icon><ion-icon name="arrow-up-outline"></ion-icon>
         </button>
         <select id="currencyTransaction">
           <option class="buy" value="Sell">Buy</option>
@@ -160,7 +160,7 @@
     
            
        </section>
-    <section class="schedule">
+    <section class="schedule" id="Information">
             <h1 class="information">Information</h1>
             <div class="container">
             <div class="contactInfo">
@@ -238,7 +238,7 @@
                           </tbody>
                         </table>
                     </div>
-                    <div class="right map">
+                    <div class="right map" id="Map">
                       <div class="center">
                         <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A6c314afcea9492e056457ced3b6cfc954b106f31d3715b6cf764c7f574a5555b&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
                       </div>

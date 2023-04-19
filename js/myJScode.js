@@ -225,7 +225,7 @@ const translations = {
     sunday:'Воскресенье'
   },
   ge: {
-    currency: 'კარგად',
+    currency: 'კურსი',
     calc: 'კალკულატორი',
     info: 'ინფორმაცია',
     map: 'რუკა',

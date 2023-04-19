@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url(../fonts/Kanit-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+}
+
 :root {
     --primary-color: #041f80;
   }
@@ -139,6 +150,7 @@ nav li{
 }
 
 
+
 .schedule .right{
     width: 50%;
     display: flex;
@@ -182,12 +194,14 @@ nav li{
     font-size: 20px;
     color: grey;
   }
+
+
  .calculator .btn {
     color: #fff;
     background: var(--primary-color);
     cursor: pointer;
     border-radius: 5px;
-    padding: 5px 12px;
+    padding: 8px 5px 5px 5px;
     font-size: 20px;
     border: #5fbaa7;
     width: 75px;
